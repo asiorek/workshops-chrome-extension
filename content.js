@@ -1,5 +1,11 @@
 var elements = document.getElementsByTagName('*');
 
+var dictionary = {
+  "chuj": "gwóźdź",
+  "dupa": "siedzisko",
+  "kurwa": "konstantynopolitańczykiewiczówna"
+};
+
 for (var i = 0; i < elements.length; i++) {
     var element = elements[i];
 
@@ -8,7 +14,7 @@ for (var i = 0; i < elements.length; i++) {
 
         if (node.nodeType === 3) {
             var text = node.nodeValue;
-            var replacedText = text.replace(/kurwa/gi, 'róża');
+            var replacedText = text.replace(/chuj|dupa|kurwa/gi, function replacer(match){return dictionary[match];});
 
             if (replacedText !== text) {
                 element.replaceChild(document.createTextNode(replacedText), node);
@@ -16,3 +22,5 @@ for (var i = 0; i < elements.length; i++) {
         }
     }
 }
+
+ 
