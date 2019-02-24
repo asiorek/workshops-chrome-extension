@@ -13,9 +13,10 @@ for (var i = 0; i < elements.length; i++) {
         var node = element.childNodes[j];
 
         if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            var replacedText = text.replace(/chuj|dupa|kurwa/gi, function replacer(match){return dictionary[match];});
-
+            var text = node.nodeValue.toLocaleLowerCase();
+            var replacedText = text.replace(/chuj|dupa|kurwa/gi, function replacer(match){
+                console.log(dictionary[match], match); return dictionary[match];});
+            // console.log(replacedText);
             if (replacedText !== text) {
                 element.replaceChild(document.createTextNode(replacedText), node);
             }
