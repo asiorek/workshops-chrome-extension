@@ -13,7 +13,7 @@ for (var i = 0; i < elements.length; i++) {
         var node = element.childNodes[j];
 
         if (node.nodeType === 3) {
-            var text = node.nodeValue.toLocaleLowerCase();
+            var text = node.nodeValue.toLowerCase();
             var replacedText = text.replace(/chuj|dupa|kurwa/gi, function replacer(match){
                 console.log(dictionary[match], match); return dictionary[match];});
             // console.log(replacedText);

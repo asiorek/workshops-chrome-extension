@@ -7,4 +7,8 @@ This is Chrome extension which replaces a negative word or phrase with positive 
 - [ ] Prepare step-by-step implementation to follow during workshops.
 
 
+
+Podmieniłem w manifest.json content.js na contentES6.js
+
+
 ##### LO Lubaczów, March 2019 

@@ -9,7 +9,7 @@
                 "*://*/*"
             ],
             "js": [
-                "content.js"
+                "contentES6.js"
             ],
             "run_at": "document_end"
         }

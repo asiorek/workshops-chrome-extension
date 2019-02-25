@@ -1,25 +1,28 @@
+// działa
+// pętla for(let i of y) iteruje po elementach tablicy lub stringu a nie po liczniku (iteratorze)
+
 const elements = document.getElementsByTagName('*');
 
-const dictrionary = {
+const dictionary = {
     "chuj": "gwóźdź",
     "dupa": "siedzisko",
     "kurwa": "konstantynopolitańczykiewiczówna"
 }
 
+
 for(let element of elements) {
-    for(let node in element.childNodes[element]) {
+    for(let node of element.childNodes) {
         if (node.nodeType === 3) {
-            var text = node.nodeValue;
-            console.log(text);
+            const text = node.nodeValue.toLowerCase();
 
-            var replacedText = text.replace(/chuj|dupa|kurwa/gi, function replacer(match){return dictionary[match];});
-
-            if (replacedText !== text) {
-                element.replaceChild(document.createTextNode(replacedText), node);
-            }
-        }
-        else {
-            console.log("blad")
+            
+            Object.keys(dictionary).forEach(word => {
+                const replacedText = text.replace(word, match => dictionary[match]);
+               
+                if (replacedText !== text) {
+                    element.replaceChild(document.createTextNode(replacedText), node);
+                }
+            });
         }
     }
 }
