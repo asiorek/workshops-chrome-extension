@@ -4,18 +4,16 @@
 const elements = document.getElementsByTagName('*');
 
 const dictionary = {
-    "chuj": "gwóźdź",
+    "gira": "gwóźdź",
     "dupa": "siedzisko",
-    "kurwa": "konstantynopolitańczykiewiczówna"
+    "pizda": "konstantynopolitańczykiewiczówna"
 }
-
 
 for(let element of elements) {
     for(let node of element.childNodes) {
         if (node.nodeType === 3) {
             const text = node.nodeValue.toLowerCase();
 
-            
             Object.keys(dictionary).forEach(word => {
                 const replacedText = text.replace(word, match => dictionary[match]);
                

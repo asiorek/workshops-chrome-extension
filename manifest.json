@@ -1,8 +1,13 @@
 {
-"manifest_version": 2,
+    "manifest_version": 2,
     "name": "Negative Word Replacer",
     "description": "This is Chrome extension which replaces a negative word or phrase with positive ones.",
     "version": "1.0",
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png",
+        "default_title": "Word Replacer"
+    },
     "content_scripts": [
         {
             "matches": [
