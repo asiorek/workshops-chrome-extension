@@ -1,27 +1,28 @@
-// działa
 // pętla for(let i of y) iteruje po elementach tablicy lub stringu a nie po liczniku (iteratorze)
 
-let elements;
-if(!elements){
-    elements = document.getElementsByTagName('*');
-} 
 
-let dictionary;
-if(!dictionary){
-    dictionary = {
-    "gira": "gwóźdź",
-    "dupa": "siedzisko",
-    "pizda": "konstantynopolitańczykiewiczówna"
-    };
+// import dictionary from './dictionary.js';
+
+
+
+const elements = document.getElementsByTagName('*');
+// const dictionary = window.ourDictionary;
+const dictionary = {
+        "gira": "gwóźdź",
+        "dupa": "siedzisko",
+        "pizda": "konstantynopolitańczykiewiczówna",
+        "kurwa": "pani pani"
 }
 
-function changeWords(message){
-    if (message) {
-        dictionary.push({
-            key: message.negative,
-            value: message.positive
-        })
-    }   
+console.log(dictionary);
+
+// function changeWords(message){
+    // if (message) {
+    //     dictionary.push({
+    //         key: message.negative,
+    //         value: message.positive
+    //     })
+    // }   
     for(let element of elements) {
         for(let node of element.childNodes) {
             if (node.nodeType === 3) {
@@ -36,14 +37,10 @@ function changeWords(message){
             }
         }
     }
-}
+// }
 
-changeWords()
+// changeWords();
 
-elements = null; 
-delete elemets;
-dictionary = null; 
-delete dictionary;
 
 // chrome.runtime.sendMessage({
 //     changed_words: changedWords // or whatever you want to send

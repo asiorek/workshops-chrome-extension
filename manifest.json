@@ -17,8 +17,12 @@
             "matches": [
                 "*://*/*"
             ],
+            "html": [
+                "popup.html"
+            ],
             "js": [
-                "contentES6.js"
+                "contentES6.js",
+                "dictionary.js"
             ],
             "run_at": "document_end"
         }

@@ -1,0 +1,16 @@
+body {
+    height: unset;
+    width: 400px;
+}
+.container {
+    margin: 20px;
+}
+.wordChangerField button {
+    width: 70%;
+}
+.wordChangerField {
+    text-align: center;
+}
+/* .ui.section.divider {
+    margin: 1rem 0;
+} */

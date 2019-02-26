@@ -1,21 +1,57 @@
 <!DOCTYPE html>
   <html>
     <head>
-      <style>
-        button {
-          height: 30px;
-          width: 30px;
-          outline: none;
-        }
-      </style>
-     
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+      <link rel="stylesheet" href="popup.css" />
+      <meta charset="utf-8">
     </head>
     <body>
-      <div>Negative</div>
-      <input type="text" id="negative"></input>
-      <div>Positive</div>
-      <input type="text" id="positive"></input>
-      <input type="submit" id="changeWords"/>
-      <script src="popup.js" type="text/javascript"></script>
+      <div class="ui container">
+        <div class="ui top attached tabular menu">
+            <a class="item active" data-tab="first">Usprawnij słownik</a>
+            <a class="item" data-tab="second">Zamień natychmiast!</a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="first">
+            <h3>Podrasujmy nasz słownik brzydkich wyrazów</h3>
+            <form onsubmit="submit" class="ui mini form" id="f">
+              <div class="one field">
+                <div class="eight wide field">
+                  <input type="text" required placeholder="Wpisz brzydkie słowo" class="field">
+                </div>
+                <div class="eight wide field">
+                  <input type="text" placeholder="Wpisz ładne słowo" class="field">
+                </div>
+              
+              <input type="submit" id="" class="ui button" form="f"/>
+          </div>
+          </form>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="second">
+          <h3>Natychmiastowo zamień odpowiednie słowo na które chcesz</h3>
+          <form onsubmit="submit" class="ui mini form" id="f">
+              <div class="one field">
+                <div class="eight wide field">
+                  <input type="text" required placeholder="Wpisz brzydkie słowo" class="field">
+                </div>
+                <div class="eight wide field">
+                  <input type="text" placeholder="Wpisz ładne słowo" class="field">
+                </div>
+              
+          </div>
+          </form> 
+        </div>
+        <!-- <div class="ui section divider"></div> -->
+        <div class="wordChangerField">
+            <button onclick="click" class="ui button red">Odpal Zamieniacza</button>
+        </div>
+     </div>
+      
+      
+      <script>$('.menu .item').tab()</script>
+      <script src="dictionary.js" type="module"></script>
+      <script src="contentES6.js" type="module"></script>
+      <!-- <script src="popup.js" type="text/javascript"></script> -->
     </body>
   </html>
