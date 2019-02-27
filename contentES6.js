@@ -1,12 +1,7 @@
 // pętla for(let i of y) iteruje po elementach tablicy lub stringu a nie po liczniku (iteratorze)
-
-
 // import dictionary from './dictionary.js';
 
-
-
 const elements = document.getElementsByTagName('*');
-// const dictionary = window.ourDictionary;
 const dictionary = {
         "gira": "gwóźdź",
         "dupa": "siedzisko",
@@ -14,15 +9,17 @@ const dictionary = {
         "kurwa": "pani pani"
 }
 
-console.log(dictionary);
+function addWordToDictionary() {
+    const badWord = document.getElementById('badWord');
+    const niceWord = document.getElementById('niceWord');
 
-// function changeWords(message){
-    // if (message) {
-    //     dictionary.push({
-    //         key: message.negative,
-    //         value: message.positive
-    //     })
-    // }   
+    addEventListener('submit', () => {
+        event.preventDefault();
+        dictionary[badWord.value] = niceWord.value;
+    });
+}
+
+function changeWords() {  
     for(let element of elements) {
         for(let node of element.childNodes) {
             if (node.nodeType === 3) {
@@ -37,9 +34,27 @@ console.log(dictionary);
             }
         }
     }
-// }
+}
 
-// changeWords();
+
+function changeOneInputWord() {
+    const badWord = document.getElementById('badWord');
+    const niceWord = document.getElementById('niceWord');
+
+
+    
+    for(let element of elements) {
+        for(let node of element.childNodes) {
+            if (node.nodeType === 3) {
+                const text = node.nodeValue;
+                const replacedText = text.replace(badWord, () => niceWord);
+                if (replacedText !== text) {
+                    element.replaceChild(document.createTextNode(replacedText), node);
+                }
+            }
+        }
+    }
+}
 
 
 // chrome.runtime.sendMessage({

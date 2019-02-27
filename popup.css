@@ -4,6 +4,7 @@ body {
 }
 .container {
     margin: 20px;
+    text-align: center;
 }
 .wordChangerField button {
     width: 70%;
@@ -14,3 +15,10 @@ body {
 /* .ui.section.divider {
     margin: 1rem 0;
 } */
+.item {
+    justify-content: center;
+    width: 50%;
+}
+.addToDictionary input {
+    margin: 0 !important;
+}
