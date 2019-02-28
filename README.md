@@ -1,14 +1,15 @@
-This is Chrome extension which replaces a negative word or phrase with positive one.
+Wtyczka do Chroma, która zmienia negatywne słowa na pozytywne.
+Wtyczka przygotowana na warsztat w LO w Lubaczowie w ramach projektu #nieIDEALNI
 
-
-## TODO:
-- [X] Add more words and/or phrases to replace in some dictionary.
-- [ ] Add popup.js and popup.html to enable custom words configuration.
-- [ ] Prepare step-by-step implementation to follow during workshops.
-
-
-
-Podmieniłem w manifest.json content.js na contentES6.js
-
+## Wersje:
+- [X] 1.0 Wtyczka umozliwia zmiane slów zgodnie ze statycznym słownikiem w content.js
+- [ ] 1.5 Wtyczka posiada widok zapisany w popup.html
+- [ ] 2.0 Wtyczka umozliwia dynamiczne modyfikowanie słów w słowniku poprzez popup.js.
+- [ ] 2.5 Wtyczka umozliwia z localStorage przeglądarki.
+- [ ] 3.0 Wtyczka umozliwia wyświetlanie słów ze słownika.
 
 ##### LO Lubaczów, March 2019 
+
+## Autorzy
+Witold Kosior,
+Joanna Roczniak
