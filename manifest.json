@@ -14,12 +14,8 @@
     },
     "content_scripts": [
         {
-            "matches": [
-                "*://*/*"
-            ],
-            "html": [
-                "popup.html"
-            ],
+            "all_frames": true,
+            "matches": ["<all_urls>"],
             "js": [
                 "contentES6.js",
                 "dictionary.js"
@@ -35,5 +31,6 @@
         "notifications",
         "http://*/*",
         "https://*/*"
-     ]
+     ],
+     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

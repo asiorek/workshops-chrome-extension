@@ -10,38 +10,38 @@
     <body>
       <div class="ui container">
         <div class="ui top menu">
-            <a class="item active" data-tab="first">Zamieniacz</a>
+            <a class="item active" data-tab="first">Zamieniacz Z</a>
             <a class="item" data-tab="second">Pokaż słownik</a>
         </div>
         <div class="ui bottom attached tab active" data-tab="first">
-            <h3>Podrasuj słownik lub zmień konkretne słowo natychmiast. kurwa</h3>
-            <form onsubmit="addWordToDictionary()" class="ui form" id="f">
+            <h3>Podrasuj słownik lub Z zmień konkretne słowo natychmiast. kurwa</h3>
+            <!-- <form class="ui form" id="dictionaryForm"> -->
               <div class="one field">
                 <div class="field">
                   <input type="text" required placeholder="Wpisz brzydkie słowo" class="field" id="badWord">
                 </div>
                 <div class="field">
-                  <input type="text" placeholder="Wpisz ładne słowo" class="field" id="niceWord">
+                  <input type="text" placeholder="Wpisz ładne słowo Z" class="field" id="niceWord">
                 </div>
               <div class="addToDictionary">
-                  <input type="submit" id="updateDictionary" class="ui button" form="f" value="Zaktualizuj słownik"/>
-                  <input type="submit" id="changeOneWord" class="ui button" form="f" value="Zamień pojedyncze słowo"  onclick="changeOneInputWord()"/>
+                  <input type="submit" id="updateButton" class="ui button" form="dictionaryForm" value="Zaktualizuj słownik"/>
+                  <input type="submit" id="changeOneWord" class="ui button" form="dictionaryForm" value="Zamień pojedyncze słowo"/>
                 </div>
           </div>
-          </form>
+          <!-- </form> -->
         </div>
         <div class="ui bottom attached tab segment" data-tab="second">
           <h3>Twój słownik</h3>
         </div>
         <div class="ui section divider"></div>
         <div class="wordChangerField">
-            <button onclick="changeWords()" class="ui button red">Odpal Zamieniacza</button>
+            <button class="ui button red" id="pageWordsChanger">Odpal Zamieniacza</button>
         </div>
      </div>
 
       
-      <script src="dictionary.js" type="module"></script>
-      <script src="contentES6.js" type="text/javascript"></script>
-      <!-- <script src="popup.js" type="text/javascript"></script> -->
+      <!-- <script src="dictionary.js" type="module"></script>
+      <script src="contentES6.js" type="text/javascript"></script> -->
+      <script src="popup.js" type="text/javascript"></script>
     </body>
   </html>
