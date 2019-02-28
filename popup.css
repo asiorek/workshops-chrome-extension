@@ -1,0 +1,23 @@
+.container{
+    padding: 5px;
+    width: 300px;
+}
+
+h1 {
+    font-size: 16px;
+    text-align: center;
+}
+
+input {
+    padding: 5px;
+    width: 95%;
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    background: #4444FF;
+    color: white;
+    margin-top: 5px;
+}
