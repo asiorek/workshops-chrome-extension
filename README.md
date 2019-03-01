@@ -7,8 +7,8 @@ Wtyczka przygotowana na warsztat w LO w Lubaczowie w ramach projektu #nieIDEALNI
 - [X] 1.5 Wtyczka posiada widok zapisany w popup.html wraz ze stylami w popup.css.
 - [X] 2.0 Wtyczka umozliwia dynamiczne dodanie bądź modyfikowanie jednego słowa w słowniku poprzez popup.js.
 - [X] 2.3 Wtyczka umozliwia uruchomienie zamieniacza zgodnie z zyczeniem.
-- [ ] 2.7 Wtyczka umozliwia wyswietlanie komunikatow sukcesu.
-- [ ] 3.0 Wtyczka umozliwia wyświetlanie słów ze słownika.
+- [ ] 2.5 Wtyczka umozliwia połączenie z localStorage przeglądarki.
+- [ ] 3.0 Wtyczka umozliwia wyswietlanie komunikatow sukcesu.
 
 ##### LO Lubaczów, March 2019 
 
