@@ -20,4 +20,13 @@ button {
     background: #4444FF;
     color: white;
     margin-top: 5px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#runButton { 
+    background: rgb(216, 28, 28);
+    color:  white;
+    font-weight: bold;
+    border-radius: 6px;
 }
