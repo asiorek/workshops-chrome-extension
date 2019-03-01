@@ -30,3 +30,7 @@ button {
     font-weight: bold;
     border-radius: 6px;
 }
+
+#message {
+    margin-top: 5px;
+}

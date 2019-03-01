@@ -10,6 +10,11 @@ document.getElementById("runButton").addEventListener("click", runDictionary);
 
 function addToDictionary() {
     const negativeWord = document.getElementById("negativeWord");
+    if (!negativeWord.value) {
+        document.getElementById("message").innerText = "Uzupełnij negatywny wyraz";
+        document.getElementById("message").style = "color: red;"
+        return;
+    }
     const positiveWord = document.getElementById("positiveWord");
 
     let dictionaryFromLocalStorage = JSON.parse(localStorage.getItem("dictionary"));
@@ -21,6 +26,8 @@ function addToDictionary() {
         dictionaryFromLocalStorage[negativeWord.value] = positiveWord.value;
         localStorage.setItem("dictionary", JSON.stringify(dictionaryFromLocalStorage));
     }
+    document.getElementById("message").innerText = "Dodano słowa do słownika";
+    document.getElementById("message").style = "color: green;"
 }
 
 function runDictionary() {
