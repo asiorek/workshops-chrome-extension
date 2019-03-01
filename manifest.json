@@ -18,5 +18,9 @@
             ],
             "run_at": "document_end"
         }
+    ],
+    "permissions": [
+        "tabs",
+        "<all_urls>"
     ]
 }
