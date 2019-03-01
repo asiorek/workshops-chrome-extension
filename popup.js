@@ -2,24 +2,36 @@ const dictionary = {
     "gira": "gwóźdź",
     "dupa": "siedzisko",
     "pizda": "konstantynopolitańczykiewiczówna",
-    "kurwa" : "pani"
+    "kurwa": "pani"
 }
 
 document.getElementById("addButton").addEventListener("click", addToDictionary);
-
 document.getElementById("runButton").addEventListener("click", runDictionary);
 
 function addToDictionary() {
     const negativeWord = document.getElementById("negativeWord");
     const positiveWord = document.getElementById("positiveWord");
 
-    dictionary[negativeWord.value] = positiveWord.value;
+    let dictionaryFromLocalStorage = JSON.parse(localStorage.getItem("dictionary"));
+
+    if (!dictionaryFromLocalStorage) {
+        dictionary[negativeWord.value] = positiveWord.value;
+        localStorage.setItem("dictionary", JSON.stringify(dictionary));
+    } else {
+        dictionaryFromLocalStorage[negativeWord.value] = positiveWord.value;
+        localStorage.setItem("dictionary", JSON.stringify(dictionaryFromLocalStorage));
+    }
 }
 
-function runDictionary(){
+function runDictionary() {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.tabs.executeScript(tabs[0].id, { file: "content.js" }, () => {
-            chrome.tabs.sendMessage(tabs[0].id, dictionary)
+            let dictionaryToSend;
+            dictionaryToSend = JSON.parse(localStorage.getItem("dictionary"));
+            if (!dictionaryToSend) {
+                dictionaryToSend = dictionary;
+            }
+            chrome.tabs.sendMessage(tabs[0].id, dictionaryToSend)
         });
     });
 }

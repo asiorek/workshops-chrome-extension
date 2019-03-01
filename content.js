@@ -6,7 +6,7 @@ function changeWords(dictionary) {
     const elements = document.getElementsByTagName('*');
 
     for (let element of elements) {
-        if (element.tagName != "SCRIPT") {
+        if (element.tagName != "SCRIPT" && element.tagName != "STYLE" && element.tagName != "NOSCRIPT") {
             for (let node of element.childNodes) {
                 if (node.nodeType === 3) {
                     const text = node.nodeValue.toLowerCase();
