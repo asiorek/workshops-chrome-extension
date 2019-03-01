@@ -1,4 +1,5 @@
 Wtyczka do Chroma, która zmienia negatywne słowa na pozytywne.
+
 Wtyczka przygotowana na warsztat w LO w Lubaczowie w ramach projektu #nieIDEALNI
 
 ## Wersje:
@@ -13,5 +14,4 @@ Wtyczka przygotowana na warsztat w LO w Lubaczowie w ramach projektu #nieIDEALNI
 ##### LO Lubaczów, March 2019 
 
 ## Autorzy
-Witold Kosior,
-Joanna Roczniak
+Witold Kosior, Joanna Roczniak
