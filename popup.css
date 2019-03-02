@@ -10,11 +10,12 @@ h1 {
 
 input {
     padding: 5px;
-    width: 95%;
+    width: 100%;
     margin: 5px 0;
+    box-sizing: border-box;
 }
 
-button {
+button {      
     padding: 10px;
     width: 100%;
     background: #4444FF;
